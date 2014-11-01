@@ -1,0 +1,10 @@
+TODO:
+
+FRONTEND:
+	images
+	formatting
+	colors
+	design
+
+BACKEND:
+	WALL Page
