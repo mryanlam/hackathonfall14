@@ -28,6 +28,7 @@ if(isset($_POST['submittedlog'])) {
         trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
     }
     $query = "SELECT username, shaPassHash, first, last FROM account WHERE username='".$_POST['userlog']."'";
+    $result = $dbc->query($query);
     if($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if($row['shaPassHash'] = hash("sha512", $_POST['userlog'].$_POST['passlog'])) {
