@@ -9,7 +9,7 @@
     <input type="hidden" name="submitted" value="TRUE" />
 </form>
 <?php
-include "includes/registersc.php";
+include "C:/xampp/includes/registersc.php";
 ?>
 </body>
 </html>
