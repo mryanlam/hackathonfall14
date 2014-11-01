@@ -34,8 +34,8 @@ signup {
     margin-left: 900px;
     margin-top: 200px;
     margin-right: 200px;
-    width: 450px;
-    height: 600px;
+    width: auto;
+    height: auto;
 }
 
 body {
