@@ -27,7 +27,7 @@ if(isset($_POST['submittedlog'])) {
     if($dbc->connect_error) {
         trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
     }
-    $query = "SELECT username, shaPassHash, first, last FROM account WHERE username=".$_POST['userlog'];
+    $query = "SELECT username, shaPassHash, first, last FROM account WHERE username='".$_POST['userlog']."'";
     if($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if($row['shaPassHash'] = hash("sha512", $_POST['userlog'].$_POST['passlog'])) {
@@ -40,7 +40,6 @@ if(isset($_POST['submittedlog'])) {
     } else {
         print("<p>username does not exist!</p>");
     }
-    session_start();
     
     $dbc->close();
 }
