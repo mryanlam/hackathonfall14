@@ -1,0 +1,38 @@
+header, signup, missionstatement {
+	display: block;	
+}
+
+header {
+	Position: fixed;
+	background-color: rgb(168, 172, 255);
+	margin: 0px;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	height: 80px;
+}
+missionstatement {
+	Position: fixed;
+	background-color: yellow;
+	margin-left: 300px;
+	margin-right: 300px;
+	margin-top: 300px;
+	width: 600px;
+	height: 400px;
+}
+
+signup {
+	Position: fixed;
+	background-color: blue;
+	margin-left: 1000px;
+	margin-top: 100px;
+	margin-right: 200px;
+	width: 450px;
+	height: 700px;
+}
+
+body {
+	background-image:url(pic1.jpg);
+	background-repeat:no-repeat;
+	background-size:cover;
+}
