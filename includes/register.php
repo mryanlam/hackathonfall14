@@ -36,6 +36,9 @@ hello
     <p><input type="submit" name="submit" value="Register" /></p>
     <input type="hidden" name="submitted" value="TRUE" />
 </form>
+<?php
+include "/hackathonfall14/includes/registersc.php";
+?>
 </div>
 <div>
 <form action="index.php" method="post">
@@ -45,11 +48,10 @@ hello
     <p><input type="submit" name="submitlog" value="Login" /></p>
     <input type="hidden" name="submittedlog" value="TRUE" />
 </form>
+<?php
+include "/hackathonfall14/includes/loginsc.php";
+?>
 </div>
 </signup>
-<!-- keep this php stuff -->
-<?php
-include "/hackathonfall14/includes/registersc.php";
-?>
 </body>
 </html>
