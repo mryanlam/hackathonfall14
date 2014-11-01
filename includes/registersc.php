@@ -29,7 +29,7 @@ if(isset($_POST['submittedlog'])) {
     }
     $query = "SELECT username, shaPassHash, first, last FROM account WHERE username=".$_POST['userlog'];
     if($result->num_rows > 0) {
-        $row = $result->fetch_assoc() 
+        $row = $result->fetch_assoc();
         if($row['shaPassHash'] = hash("sha512", $_POST['userlog'].$_POST['passlog']) {
             session_start();
             $_SESSION['loggedin'] = true;
