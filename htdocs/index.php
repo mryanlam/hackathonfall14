@@ -1,3 +1,3 @@
 <?php
-include "C:\xampp\includes\register.php"
+include "/hackathonfall14/includes/register.php"
 ?>
