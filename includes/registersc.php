@@ -8,7 +8,7 @@ if(isset($_POST['submitted'])) {
     if($dbc->connect_error) {
         trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
     }
-    $query = "INSERT INTO account (username, pass, email) VALUES ('".$_POST['user']."', '".hash("sha512", $_POST['user'].$_POST['pass'])."', '".$_POST['email']."')";
+    $query = "INSERT INTO account (username, shaPassHash, email) VALUES ('".$_POST['user']."', '".hash("sha512", $_POST['user'].$_POST['pass'])."', '".$_POST['email']."')";
     $result = $dbc->query($query);
     if($result) {
         print("<p>REGISTERED: ".$_POST['user']."</p>");
