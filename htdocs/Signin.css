@@ -1,38 +1,55 @@
 header, signup, missionstatement {
-	display: block;	
+    display: block;	
 }
 
 header {
-	Position: fixed;
-	background-color: rgb(168, 172, 255);
+    Position: fixed;
+    background-color: rgb(168, 172, 255);
 	margin: 0px;
-	left: 0px;
-	top: 0px;
-	right: 0px;
-	height: 80px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    height: 80px;
+    z-index: +1;
 }
 missionstatement {
-	Position: fixed;
-	background-color: yellow;
-	margin-left: 300px;
-	margin-right: 300px;
-	margin-top: 300px;
-	width: 600px;
-	height: 400px;
+    Position: absolute;
+    margin: 100px 100px;
+    margin-top: 200px;
+    width: 600px;
+    height: 400px;
+    border-width:5px;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: black;
+    color: white;
+}
+ms.header {
+    padding-left: 50px;
+    font-size: 200%;
 }
 
+ms.content {
+    text-align: left;
+    font-size: 100%;
+}
 signup {
-	Position: fixed;
-	background-color: blue;
-	margin-left: 1000px;
-	margin-top: 100px;
-	margin-right: 200px;
-	width: 450px;
-	height: 700px;
+    Position: absolute;
+    margin-left: 900px;
+    margin-top: 200px;
+    margin-right: 200px;
+    width: 450px;
+    height: 600px;
 }
 
 body {
-	background-image:url(pic1.jpg);
-	background-repeat:no-repeat;
-	background-size:cover;
+    background-image:url(pic1.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+div {
+    border-width:1px;
+    border-style: solid;
+    border-radius: 25px;
+    background-color: rgb(240, 240, 240);
 }
