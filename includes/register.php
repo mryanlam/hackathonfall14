@@ -31,6 +31,8 @@ hello
     <p>Username: <input type="text" name="user" /></p>
     <p>Password: <input type="text" name="pass" /></p>
     <p>Email: <input type="text" name="email" /></p>
+    <p>First: <input type="text" name="first" /></p>
+    <p>Last: <input type="text" name="last" /></p>
     <p><input type="submit" name="submit" value="Register" /></p>
     <input type="hidden" name="submitted" value="TRUE" />
 </form>
