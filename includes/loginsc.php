@@ -13,12 +13,11 @@ if(isset($_POST['submittedlog'])) {
     if($result->num_rows > 0) {
         $row = $result->fetch_assoc();
         if($row['shaPassHash'] = hash("sha512", $_POST['userlog'].$_POST['passlog'])) {
-            session_start();
             $_SESSION['loggedin'] = true;
             $_SESSION['first'] = $row['first'];
             $_SESSION['last'] = $row['last'];
             $_SESSION['user'] = $row['username'];
-            print('<p onload="location.reload();"></p>');
+            header("Refresh:0");
         }
     } else {
         print("<p>username does not exist!</p>");
