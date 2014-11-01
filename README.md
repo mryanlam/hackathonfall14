@@ -3,4 +3,4 @@ hackathonfall14
 
 Hackathon fall 2014 project
 
-dodlgdrll
+TODO: Database should hold first/last name as well. Should the login be their email?
