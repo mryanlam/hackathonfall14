@@ -3,7 +3,7 @@ if(isset($_POST['submitted'])) {
     DEFINE('USER', 'root');
     DEFINE('PASSWORD', '');
     DEFINE('HOST', 'localhost');
-    DEFINE('DB', 'world');
+    DEFINE('DB', 'auth');
     $dbc = new mysqli(HOST, USER, PASSWORD, DB);
     if($dbc->connect_error) {
         trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);

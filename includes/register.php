@@ -14,7 +14,7 @@
     <p>Log in!</p>
     <p>Username: <input type="text" name="userlog" /></p>
     <p>Password: <input type="text" name="passlog" /></p>
-    <p><input type="submit" name="submitlog" value="Register" /></p>
+    <p><input type="submit" name="submitlog" value="Login" /></p>
     <input type="hidden" name="submittedlog" value="TRUE" />
 </form>
 <!-- keep this php stuff -->
