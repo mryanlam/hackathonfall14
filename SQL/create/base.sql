@@ -15,7 +15,7 @@ DROP TABLE IF EXISTS `department`;
 CREATE TABLE `department` (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'Unique ID',
     `code` varchar(32) NOT NULL DEFAULT '',
-    `name` varchar(32) NOT NULL DEFAULT '',
+    `name` varchar(255) NOT NULL DEFAULT '',
     PRIMARY KEY (`id`),
     UNIQUE KEY `idxCode` (`code`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='All Departments';
@@ -25,7 +25,7 @@ CREATE TABLE `course` (
     `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT 'course id',
     `deptid` int(10) unsigned,
     `courseNumber` int(10) unsigned,
-    `courseName` varchar(32) NOT NULL DEFAULT '',
+    `courseName` varchar(255) NOT NULL DEFAULT '',
     PRIMARY KEY (`id`),
     UNIQUE KEY `idxCourse` (`courseName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='All Courses';
