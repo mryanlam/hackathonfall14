@@ -25,7 +25,7 @@ CREATE TABLE `course` (
     `courseNumber` int(10) unsigned,
     `courseName` varchar(32) NOT NULL DEFAULT '',
     PRIMARY KEY (`id`),
-    UNIQUE KEY `idxCourse` (`course_name`)
+    UNIQUE KEY `idxCourse` (`courseName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='All Courses';
 
 DROP TABLE IF EXISTS `myCourses`;
