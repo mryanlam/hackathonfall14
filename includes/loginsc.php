@@ -18,11 +18,11 @@ if(isset($_POST['submittedlog'])) {
             $_SESSION['first'] = $row['first'];
             $_SESSION['last'] = $row['last'];
             $_SESSION['user'] = $row['username'];
+            print('<p onload="location.reload();"></p>');
         }
     } else {
         print("<p>username does not exist!</p>");
     }
-    
-    $dbc->close();
+    $dbc->close(); 
 }
 ?>
