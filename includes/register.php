@@ -28,7 +28,7 @@ hello
 <div>
 <form action="index.php" method="post">
     <p>Log in!</p>
-    <p><input type="text" name="userlog" placeholder="Username opr Email"/></p>
+    <p><input type="text" name="userlog" placeholder="Username or Email"/></p>
     <p><input type="text" name="passlog" placeholder="Password"/></p>
     <p><input type="submit" name="submitlog" value="Login" /></p>
     <input type="hidden" name="submittedlog" value="TRUE" />
@@ -37,6 +37,7 @@ hello
 include "/hackathonfall14/includes/loginsc.php";
 ?>
 </div>
+<br>
 <div>
 <form action="index.php" method="post">
     <p>Sign up!</p>
