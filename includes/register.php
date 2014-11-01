@@ -27,29 +27,29 @@ hello
 <!--This is a shitty mockup from Jeff, change it however you want -->
 <div>
 <form action="index.php" method="post">
-    <p>Sign up!</p>
-    <p>Username: <input type="text" name="user" /></p>
-    <p>Password: <input type="text" name="pass" /></p>
-    <p>Email: <input type="text" name="email" /></p>
-    <p>First: <input type="text" name="first" /></p>
-    <p>Last: <input type="text" name="last" /></p>
-    <p><input type="submit" name="submit" value="Register" /></p>
-    <input type="hidden" name="submitted" value="TRUE" />
-</form>
-<?php
-include "/hackathonfall14/includes/registersc.php";
-?>
-</div>
-<div>
-<form action="index.php" method="post">
     <p>Log in!</p>
-    <p>Username: <input type="text" name="userlog" /></p>
-    <p>Password: <input type="text" name="passlog" /></p>
+    <p><input type="text" name="userlog" placeholder="Username"/></p>
+    <p><input type="text" name="passlog" placeholder="Password"/></p>
     <p><input type="submit" name="submitlog" value="Login" /></p>
     <input type="hidden" name="submittedlog" value="TRUE" />
 </form>
 <?php
 include "/hackathonfall14/includes/loginsc.php";
+?>
+</div>
+<div>
+<form action="index.php" method="post">
+    <p>Sign up!</p>
+    <p><input type="text" name="user" placeholder="Username"/></p>
+    <p><input type="text" name="pass" placeholder="Password"/></p>
+    <p><input type="text" name="email" placeholder="Email"/></p>
+    <p><input type="text" name="first" placeholder="First Name"/></p>
+    <p><input type="text" name="last" placeholder="Last Name"/></p>
+    <p><input type="submit" name="submit" value="Register" /></p>
+    <input type="hidden" name="submitted" value="TRUE" />
+</form>
+<?php
+include "/hackathonfall14/includes/registersc.php";
 ?>
 </div>
 </signup>
