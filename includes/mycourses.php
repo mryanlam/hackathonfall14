@@ -15,7 +15,7 @@ function classClick(ele) {
         }
     } else {
         for(var i = 0; i < allmsgs.length; i++) {
-            if(allmsgs[i].name != ele.name)
+            if(allmsgs[i].title != ele.title)
                 allmsgs[i].style.visibility='hidden';
         }
         ele.style.backgroundcolor = 'red';
@@ -33,9 +33,9 @@ Make it clickable in css!
 <?php
 include "/hackathonfall14/includes/getclasses.php";
 ?>
-<button class="class" onClick=addClass()>
+<div class="class" onClick="addClass();">
 + Class
-</button>
+</div>
 </classlist>
 <chatbox>
 <?php
