@@ -55,9 +55,12 @@ classadd {
 }
 
 body {
+    /*
     background-image:url(pic1.jpg);
     background-repeat:no-repeat;
     background-size:cover;
+    */
+    background: url(<?php echo $selectedBg; ?>) no-repeat;
     font-family: "Arial", sans-serif;
 }
 
@@ -94,11 +97,12 @@ div.logo{
     font-size: 300%;
 }
 /*stretch to the end*/
-button.class {
+div.class {
     text-align: left;
     padding-left: 10px; 
     padding-right: 10px;
     width: 400px;
+    cursor: pointer;
 }
 
 button.addclass {
