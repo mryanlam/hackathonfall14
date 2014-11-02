@@ -12,6 +12,15 @@ if($dbc->connect_error) {
 if (isset($_POST["choice"]))
 {
     $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
+    $result = $dbc ->query($query);
+    if ($result)
+    {
+        header("Location: index.php");
+    }
+    else
+    {
+        print("failed to register course");
+    }
 }
 else 
 {
