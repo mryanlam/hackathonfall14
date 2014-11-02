@@ -15,9 +15,9 @@ hello
         Speak Easy
     </ms>
     <ms class="content">
-    <br>Making teamwork smarter and faster. </br>
-    <br>Connect with classmates and peers and begin to work together! </br>
-    <br>Solve the problems of today and reach the goals of tomorrow.</br>
+    <br>Making teamwork smarter and faster.
+    <br>Connect with classmates and peers and begin to work together!
+    <br>Solve the problems of today and reach the goals of tomorrow.
     </ms>
 </missionstatement>
 
