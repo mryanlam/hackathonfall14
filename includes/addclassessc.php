@@ -1,15 +1,6 @@
 <?php
-
-DEFINE('USER', 'root');
-DEFINE('PASSWORD', '');
-DEFINE('HOST', 'localhost');
-DEFINE('DB', 'auth');
-$dbc = new mysqli(HOST, USER, PASSWORD, DB);
-if($dbc->connect_error) {
-       trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
-}
-
-function makeButtons()
+/* Functions */
+function makeButtons($dbc)
 {
     $query = "SELECT department.code, course.id, course.courseNumber, course.courseName FROM course INNER JOIN department ON course.deptid=department.id";
     //print($query);
@@ -25,6 +16,16 @@ function makeButtons()
     $dbc->close();
 }
 
+/* Script */
+DEFINE('USER', 'root');
+DEFINE('PASSWORD', '');
+DEFINE('HOST', 'localhost');
+DEFINE('DB', 'auth');
+$dbc = new mysqli(HOST, USER, PASSWORD, DB);
+if($dbc->connect_error) {
+       trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
+}
+
 if (isset($_POST["choice"]))
 {
     $query = 'SELECT * FROM mycourses WHERE id='.$_SESSION["user"].' AND crs1='.$_POST["choice"];
@@ -33,7 +34,7 @@ if (isset($_POST["choice"]))
     if ($result)
     {
         print("You are already registered for that course");
-        makeButtons();
+        makeButtons($dbc);
     }
     else
     {
@@ -52,6 +53,6 @@ if (isset($_POST["choice"]))
 }
 else 
 {
-    makeButtons();
+    makeButtons($dbc);
 }
 ?>
