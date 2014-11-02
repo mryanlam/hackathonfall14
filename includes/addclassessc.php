@@ -9,6 +9,7 @@ if(isset($_POST['submittedlog'])) {
         trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
     }
     $query = "SELECT department.code, course.id, course.courseNumber, course.courseName FROM course INNER JOIN department ON course.deptid=department.id";
+    print($query);
     $result = $dbc->query($query);
     if($result) {
         while ($row = $result->fetch_assoc())
