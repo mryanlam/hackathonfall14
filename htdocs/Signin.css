@@ -89,12 +89,14 @@ div.logo{
 }
 /*stretch to the end*/
 button.class {
+    text-align: left;
     padding-left: 10px; 
     padding-right: 10px;
     width: 400px;
 }
 
 button.addclass {
+    text-align: left;
     padding-left: 10px; 
     padding-right: 10px;
     width: 400px
