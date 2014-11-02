@@ -13,7 +13,7 @@ Make it clickable in css!
 <?php
 include "/hackathonfall14/includes/getclasses.php";
 ?>
-<button class="addclass">
+<button class="class">
 + Class
 </button>
 </classlist>
