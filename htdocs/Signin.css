@@ -143,15 +143,17 @@ classlist {
     margin-right: 100px;
     width: 401px;
     background-color: rgb(240, 240, 240);
-    height: 100%;
+    height: 50%;
 }
 chatbox {
     position: absolute;
     margin-top: 100px;
     margin-left: 500px;
+    margin-right: 500px;
+    float: right;
     background-color: rgb(200, 200, 200);
-    width: 70%;
-    height: 100%;
+    width: 40%;
+    height: 50%;
 }
 
 
