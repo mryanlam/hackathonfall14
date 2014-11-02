@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['submitted'])) {
+if(isset($_POST['submittedlog'])) {
     DEFINE('USER', 'root');
     DEFINE('PASSWORD', '');
     DEFINE('HOST', 'localhost');
