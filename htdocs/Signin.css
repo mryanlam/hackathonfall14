@@ -16,7 +16,7 @@ missionstatement {
     text-shadow: 0 0 3px rgb(0, 0, 0);
     Position: relative;
     margin: 100px 100px;
-    margin-top: 200px;
+    margin-top: 150px;
     width: auto;
     height: auto;
     color: white;
@@ -34,6 +34,7 @@ signup {
     left: 20px;
     width: auto;
     height: auto;
+    float: right;
     margin-right: 100px;
     margin-top: 150px;
 }
