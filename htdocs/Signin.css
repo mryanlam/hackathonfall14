@@ -60,14 +60,13 @@ classadd {
 }
 
 body {
+    /*
     background-image:url(pic1.jpg);
     background-repeat:no-repeat;
     background-size:cover;
+    */
+    background: url(<?php echo $selectedBg; ?>) no-repeat;
     font-family: "Arial", sans-serif;
-}
-
-div.css-slideshow{
-
 }
 
 div.sign {

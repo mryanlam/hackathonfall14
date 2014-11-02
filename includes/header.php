@@ -18,7 +18,11 @@ function logout() {
 </div>
 </padder>
 <?php
-
+/* Random Background */
+$bg = array('pic1.jpg', 'pic2.jpg', 'pic3.jpg', 'pic4.jpg');
+$i = rand(0, count($bg)-1);
+$selectedBg = "$bg[$i]";
+/* if logged in display */
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     print('<div class="headername">'.$_SESSION['first'].' '.$_SESSION['last'].'<br>'.$_SESSION['email']);
     print('<br><button onClick=logout()>Logout</button></div>');
