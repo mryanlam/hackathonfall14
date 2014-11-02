@@ -29,7 +29,7 @@ if(isset($_POST['submitted'])) {
             $_SESSION['user'] = $row['id'];
             header("Refresh:0");
         } else {
-            print("<p>OOPS ".$dbc->error."</p>");
+            print("<myErr>OOPS ".$dbc->error."</myErr>");
         }
         $dbc->close();
     }
