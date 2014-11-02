@@ -28,5 +28,12 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     print('<br><button onClick=logout()>Logout</button></div>');
 }
 ?>
+<style type="text/css">
+<!--
+body{
+background: url(images/<?php echo $selectedBg; ?>) no-repeat;
+}
+-->
+</style>style>
 </header>
 
