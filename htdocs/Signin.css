@@ -114,13 +114,16 @@ button.addclass {
 }
 
 div.topmsg{
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
     width: 100%;
     border: solid;
-    border-radius: 25px;  
     border-width: 1px;
     background-color: rgb(227, 236, 255);
-    
 }
+
 
 p {
     padding-left: 10px;
