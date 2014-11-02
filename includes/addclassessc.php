@@ -1,28 +1,6 @@
 <?php
-
-DEFINE('USER', 'root');
-DEFINE('PASSWORD', '');
-DEFINE('HOST', 'localhost');
-DEFINE('DB', 'auth');
-$dbc = new mysqli(HOST, USER, PASSWORD, DB);
-if($dbc->connect_error) {
-       trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
-}
-
-if (isset($_POST["choice"]))
-{
-    $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
-    $result = $dbc ->query($query);
-    if ($result)
-    {
-        header("Location: index.php");
-    }
-    else
-    {
-        print("failed to register course");
-    }
-}
-else 
+/* Functions */
+function makeButtons($dbc)
 {
     $query = "SELECT department.code, course.id, course.courseNumber, course.courseName FROM course INNER JOIN department ON course.deptid=department.id";
     //print($query);
@@ -36,5 +14,45 @@ else
         print("<p>No Classes Exist</p>");
     }
     $dbc->close();
+}
+
+/* Script */
+DEFINE('USER', 'root');
+DEFINE('PASSWORD', '');
+DEFINE('HOST', 'localhost');
+DEFINE('DB', 'auth');
+$dbc = new mysqli(HOST, USER, PASSWORD, DB);
+if($dbc->connect_error) {
+       trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
+}
+
+if (isset($_POST["choice"]))
+{
+    $query = 'SELECT * FROM mycourses WHERE id='.$_SESSION["user"].' AND crs1='.$_POST["choice"];
+    //print($query);
+    $result = $dbc->query($query);
+    if ($result)
+    {
+        print("You are already registered for that course");
+        makeButtons($dbc);
+    }
+    else
+    {
+        $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
+        $result = $dbc->query($query);
+        if ($result)
+        {
+            header("Location: index.php");
+        }
+        else
+        {
+            print("failed to register course");
+        }
+    }
+    $dbc->close();
+}
+else 
+{
+    makeButtons($dbc);
 }
 ?>
