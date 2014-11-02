@@ -110,8 +110,8 @@ div.class {
     background-color: rgb(254,254,254);
     margin-left: 20px;
     margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 div.topmsg{
@@ -120,6 +120,8 @@ div.topmsg{
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-top: 5px;
+    margin-bot: 5px;
     margin-left: 20px;
     margin-right: 20px;
     border: solid;
