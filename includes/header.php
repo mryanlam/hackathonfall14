@@ -7,7 +7,10 @@
 
 <body>
 <header>
-<img src="LOGO.png" height="80" width="150">
+<img src="Logo.png" height="80" width="auto">
+<div class="logo">
+    SPEAKEASY
+</div>
 <?php
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     print('<div class="headername">'.$_SESSION['first'].' '.$_SESSION['last'].'<br>'.$_SESSION['email'].'</div>');
