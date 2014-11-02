@@ -7,7 +7,7 @@ $dbc = new mysqli(HOST, USER, PASSWORD, DB);
 if($dbc->connect_error) {
     trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
 } 
-$query = "SELECT id FROM account WHERE username='".$_SESSION['user']."'";
+$query = "SELECT id FROM account WHERE id='".$_SESSION['user']."'";
 $result = $dbc->query($query);
 if($result->num_rows > 0){
     $row = $result->fetch_assoc();

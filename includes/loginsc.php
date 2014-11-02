@@ -8,7 +8,7 @@ if(isset($_POST['submittedlog'])) {
     if($dbc->connect_error) {
         trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
     }
-    $query = "SELECT username, shaPassHash, first, last FROM account WHERE username='".$_POST['userlog']."' OR email='".$_POST['userlog']."'";
+    $query = "SELECT id, shaPassHash, first, last, email FROM account WHERE username='".$_POST['userlog']."' OR email='".$_POST['userlog']."'";
     $result = $dbc->query($query);
     if($result->num_rows > 0) {
         $row = $result->fetch_assoc();
@@ -16,7 +16,8 @@ if(isset($_POST['submittedlog'])) {
             $_SESSION['loggedin'] = true;
             $_SESSION['first'] = $row['first'];
             $_SESSION['last'] = $row['last'];
-            $_SESSION['user'] = $row['username'];
+            $_SESSION['email'] = $row['email'];
+            $_SESSION['user'] = $row['id'];
             header("Refresh:0");
         }
     } else {
