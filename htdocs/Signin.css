@@ -60,9 +60,12 @@ classadd {
 }
 
 body {
+    /*
     background-image:url(pic1.jpg);
     background-repeat:no-repeat;
     background-size:cover;
+    */
+    background: url(<?php echo $selectedBg; ?>) no-repeat;
     font-family: "Arial", sans-serif;
 }
 
@@ -99,11 +102,12 @@ div.logo{
     font-size: 300%;
 }
 /*stretch to the end*/
-button.class {
+div.class {
     text-align: left;
     padding-left: 10px; 
     padding-right: 10px;
     width: 400px;
+    cursor: pointer;
 }
 
 button.addclass {
@@ -114,13 +118,16 @@ button.addclass {
 }
 
 div.topmsg{
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
     width: 100%;
     border: solid;
-    border-radius: 25px;  
     border-width: 1px;
     background-color: rgb(227, 236, 255);
-    
 }
+
 
 p {
     padding-left: 10px;
