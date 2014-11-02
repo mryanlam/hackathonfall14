@@ -14,7 +14,7 @@ if($result->num_rows > 0){
     $query = "SELECT crs1, crs2, crs3, crs4 FROM mycourses WHERE id='".$row['id']."'";
     $result = $dbc->query($query);
     if($result->num_rows > 0){
-        $classes->fetch_assoc();
+        $classes = $result->fetch_assoc();
         include "/hackathonfall14/includes/mycourses.php";
     } else {
         $dbc->close();
