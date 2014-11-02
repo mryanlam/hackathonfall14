@@ -40,7 +40,7 @@ include "/hackathonfall14/includes/getclasses.php";
 </div>
 </classlist>
 <chatbox>
-<div class="sendform" display="none">
+<div class="sendform">
 <form action="index.php" method="post">
 <div class="leftform"><input type="text" name="msgtosend" placeholder="Enter message here!"/></div>
 <div class="rightform"><input type="submit" name="sendbtn" value="Send!"/></div>
