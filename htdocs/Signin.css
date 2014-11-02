@@ -65,6 +65,17 @@ div.sign {
     padding-bottom: 10px;
     padding-top: 10px;
 }
+
+div.headername {
+    right: 0px;
+    text-align: center;
+    display: inline;
+    font-family: "Arial", sans-serif;
+    color: white;
+    position: fixed;
+    z-index: +1;
+}
+
 p {
     padding-left: 10px;
     padding-top; 10px;
