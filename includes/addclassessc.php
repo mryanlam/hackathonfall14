@@ -9,15 +9,31 @@ if($dbc->connect_error) {
        trigger_error("Could not connect! ".$dbc->connect_error, E_USER_ERROR);
 }
 
+function makeButtons()
+{
+    $query = "SELECT department.code, course.id, course.courseNumber, course.courseName FROM course INNER JOIN department ON course.deptid=department.id";
+    //print($query);
+    $result = $dbc->query($query);
+    if($result) {
+        while ($row = $result->fetch_assoc())
+        {
+            printf('<button class="addclass" onclick="checkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
+        }
+    } else {
+        print("<p>No Classes Exist</p>");
+    }
+    $dbc->close();
+}
+
 if (isset($_POST["choice"]))
 {
     $query = 'SELECT * FROM mycourses WHERE id='.$_SESSION["user"].' AND crs1='.$_POST["choice"];
-    print($query);
-    
+    //print($query);
     $result = $dbc->query($query);
     if ($result)
     {
         print("You are already registered for that course");
+        makeButtons();
     }
     else
     {
@@ -32,22 +48,10 @@ if (isset($_POST["choice"]))
             print("failed to register course");
         }
     }
-    
-    
+    $dbc->close();
 }
 else 
 {
-    $query = "SELECT department.code, course.id, course.courseNumber, course.courseName FROM course INNER JOIN department ON course.deptid=department.id";
-    //print($query);
-    $result = $dbc->query($query);
-    if($result) {
-        while ($row = $result->fetch_assoc())
-        {
-            printf('<button class="addclass" onclick="checkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
-        }
-    } else {
-        print("<p>No Classes Exist</p>");
-    }
-    $dbc->close();
+    makeButtons();
 }
 ?>
