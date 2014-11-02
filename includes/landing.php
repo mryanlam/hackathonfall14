@@ -11,15 +11,14 @@ $query = "SELECT id FROM account WHERE username='".$_SESSION['user']."'";
 $result = $dbc->query($query);
 if($result->num_rows > 0){
     $row = $result->fetch_assoc();
-    $query = "SELECT * FROM mycourses WHERE id='".$row['id']."'";
+    $query = "SELECT crs1, crs2, crs3, crs4 FROM mycourses WHERE id='".$row['id']."'";
     $result = $dbc->query($query);
     if($result->num_rows > 0){
-        $dbc->close();
         $classes->fetch_assoc();
         include "/hackathonfall14/includes/mycourses.php";
     } else {
         $dbc->close();
-        header("Location: /hackathonfall14/htdocs/classes.php");
+        header("Location: classes.php");
     }
 } else {
 //DATABASE ERROR
