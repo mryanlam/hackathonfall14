@@ -22,7 +22,9 @@ include "/hackathonfall14/includes/getclasses.php";
 </button>
 </classlist>
 <chatbox>
-
+<?php
+include "/hackathonfall14/includes/getmessages.php";
+?>
 </chatbox>
 </body>
 </html>
