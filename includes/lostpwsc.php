@@ -16,9 +16,11 @@ if(isset($_POST['submittedlog'])) {
         $result = $dbc->query($query);
         if($result) {
             print("password changed");
+        } else {
+            print("failed to change password");
         }
     } else {
-        print("<p>OOPS ".$dbc->error."</p>");
+        print("<p>incorrect email</p>");
     }
     $dbc->close();
 }
