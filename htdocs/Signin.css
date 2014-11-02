@@ -41,9 +41,9 @@ signup {
 
 classadd {
     Position: absolute;
-    text-align: center;
-    margin-top: 200px;
-    left: 20px;
+    left:50%;
+    margin-top:200px;  
+    margin-left:-250px; 
     width: auto;
     height: auto;
 }

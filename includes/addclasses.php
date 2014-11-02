@@ -2,7 +2,7 @@
 include "/hackathonfall14/includes/header.php";
 ?>
 
-<signup>
+<classadd>
 <!--Basically, forums just need to use post and you have to let Jeff know the name of the inputs -->
 <!--This is a shitty mockup from Jeff, change it however you want -->
 <div>
@@ -11,6 +11,6 @@ include "/hackathonfall14/includes/header.php";
 include "/hackathonfall14/includes/addclassessc.php";
 ?>
 </div>
-</signup>
+</classadd>
 </body>
 </html>
