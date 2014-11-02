@@ -12,7 +12,7 @@ if(isset($_POST['submittedlog'])) {
     $result = $dbc->query($query);
     if($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        if($row['shaPassHash'] = hash("sha512", $_POST['userlog'].$_POST['passlog'])) {
+        if($row['shaPassHash'] == hash("sha512", $_POST['userlog'].$_POST['passlog'])) {
             $_SESSION['loggedin'] = true;
             $_SESSION['first'] = $row['first'];
             $_SESSION['last'] = $row['last'];
