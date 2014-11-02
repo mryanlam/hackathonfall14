@@ -107,15 +107,8 @@ div.class {
     border-width: 1px;
     border-radius: 5px;
     background-color: rgb(254,254,254);
-}
-
-button.addclass {
     margin-left: 10px;
     margin-right: 10px;
-    text-align: left;
-    padding-left: 10px; 
-    padding-right: 10px;
-    width: 400px
 }
 
 div.topmsg{
