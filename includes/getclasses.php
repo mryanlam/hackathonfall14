@@ -7,7 +7,7 @@ while($curclass = $classes->fetch_assoc()) {
         print('<div class="class" onClick="classClick(this)" title='.$row['courseNumber'].'>');
         print($row['code'].' '.$row['courseNumber'].'<br>');
         print($row['courseName']);
-        print('</div><br>');
+        print('</div>');
     }
 }
 ?>
