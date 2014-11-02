@@ -12,6 +12,15 @@ if($dbc->connect_error) {
 if (isset($_POST["choice"]))
 {
     $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
+    $result = $dbc ->query($query);
+    if ($result)
+    {
+        header("Location: index.php");
+    }
+    else
+    {
+        print("failed to register course");
+    }
 }
 else 
 {
@@ -21,7 +30,7 @@ else
     if($result) {
         while ($row = $result->fetch_assoc())
         {
-            printf('<button onclick="chkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
+            printf('<button onclick="checkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
         }
     } else {
         print("<p>No Classes Exist</p>");
