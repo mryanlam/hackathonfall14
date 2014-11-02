@@ -11,7 +11,7 @@ function makeButtons($dbc)
             printf('<button class="addclass" onclick="checkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
         }
     } else {
-        print("<p>No Classes Exist</p>");
+        print("<myErr>No Classes Exist</myErr>");
     }
     $dbc->close();
 }
@@ -28,12 +28,14 @@ if($dbc->connect_error) {
 
 if (isset($_POST["choice"]))
 {
-    $query = 'SELECT * FROM mycourses WHERE id='.$_SESSION["user"].' AND crs1='.$_POST["choice"];
+    $query = "SELECT id, crs1 FROM mycourses WHERE id=".$_SESSION['user']." AND crs1=".$_POST['choice'];
     //print($query);
     $result = $dbc->query($query);
-    if ($result)
+    if ($result->num_rows > 0)
     {
-        print("You are already registered for that course");
+        $row=$result->fetch_assoc();
+        //printf($row['id']." ".$row['crs1']);
+        print("<myErr>You are already registered for that course<br></myErr>");
         makeButtons($dbc);
     }
     else
@@ -46,10 +48,9 @@ if (isset($_POST["choice"]))
         }
         else
         {
-            print("failed to register course");
+            print("<myErr>failed to register course</myErr>");
         }
     }
-    $dbc->close();
 }
 else 
 {
