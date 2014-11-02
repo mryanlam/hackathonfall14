@@ -41,13 +41,14 @@ include "/hackathonfall14/includes/getclasses.php";
 </classlist>
 <chatbox>
 <div class="sendform">
-<form action="index.php" method="post">
-<div class="leftform"><input type="text" name="msgtosend" placeholder="Enter message here!"/></div>
-<div class="rightform"><input type="submit" name="sendbtn" value="Send!"/></div>
+<form action="index.php" method="post" id="sendformid">
+<div class="rightform"><input type="submit" name="sendbtn" value="Send!" style="width: 100%; height: 100%"/></div>
 <input type="hidden" name="sendval"/>
 </form>
+<div class="leftform"><textarea name="msgtosend" style="width: 100%; height: 100%; resize: none" form="sendformid" placeholder="Enter message here!"></textarea></div>
 </div> 
 <?php
+include "/hackathonfall14/includes/sendmsg.php";
 include "/hackathonfall14/includes/getmessages.php";
 ?>
 </chatbox>
