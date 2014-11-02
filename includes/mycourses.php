@@ -13,7 +13,7 @@ function classClick(ele) {
         for(var i = 0; i < allmsgs.length; i++) {
             allmsgs[i].style.display='block';
         }
-        document.getElementByClassName("sendform").style.display='none';
+        document.getElementByClassName('sendform').style.display='none';
     } else {
         for(var i = 0; i < allmsgs.length; i++) {
             if(allmsgs[i].title != ele.title)
@@ -26,19 +26,12 @@ function classClick(ele) {
             allclasses[j].style.backgroundColor = 'rgb(254, 254, 254)';
         }
         ele.style.backgroundColor = 'rgb(220, 220, 220)';
-        document.getElementByClassName("sendform").style.display='block';
-        document.getElementByName("sendval").setAttribute("value", ele.title);
+        document.getElementByClassName('sendform').style.display='block';
+        document.getElementByName('sendval').setAttribute('value', ele.title);
     }
 }
 </script>
 <classlist>
-<div class="sendform">
-<form action="index.php" method="post">
-<div class="leftform"><input type="text" name="msgtosend" placeholder="Enter message here!"/></div>
-<div class="rightform"><input type="submit" name="sendbtn" value="Send!"/></div>
-<input type="hidden" name="sendval"/>
-</form>
-</div> 
 <?php
 include "/hackathonfall14/includes/getclasses.php";
 ?>
@@ -47,6 +40,13 @@ include "/hackathonfall14/includes/getclasses.php";
 </div>
 </classlist>
 <chatbox>
+<div class="sendform">
+<form action="index.php" method="post">
+<div class="leftform"><input type="text" name="msgtosend" placeholder="Enter message here!"/></div>
+<div class="rightform"><input type="submit" name="sendbtn" value="Send!"/></div>
+<input type="hidden" name="sendval"/>
+</form>
+</div> 
 <?php
 include "/hackathonfall14/includes/getmessages.php";
 ?>
