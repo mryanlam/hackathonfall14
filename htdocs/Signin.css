@@ -108,10 +108,10 @@ div.class {
     border-width: 1px;
     border-radius: 5px;
     background-color: rgb(254,254,254);
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 div.topmsg{
@@ -120,7 +120,8 @@ div.topmsg{
     padding-right: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
-    width: 95%;
+    margin-left: 20px;
+    margin-right: 20px;
     border: solid;
     border-width: 1px;
     border-radius: 5px;
