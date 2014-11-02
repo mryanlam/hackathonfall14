@@ -103,6 +103,9 @@ div.class {
     padding-right: 10px;
     width: 400px;
     cursor: pointer;
+    border: solid;
+    border-width: 1px;
+    background-color: rgb(240,240,240);
 }
 
 button.addclass {
