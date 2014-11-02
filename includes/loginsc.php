@@ -22,8 +22,12 @@ if(isset($_POST['submittedlog'])) {
             $_SESSION['user'] = $row['id'];
             header("Refresh:0");
         }
+        else
+        {
+            print("<p>Incorrect Username or Password</p>");
+        }
     } else {
-        print("<p>username does not exist!</p>");
+        print("<p>Incorrect Username or Password</p>");
     }
     $dbc->close(); 
 }
