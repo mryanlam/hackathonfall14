@@ -17,6 +17,12 @@ function classClick(ele) {
         for(var i = 0; i < allmsgs.length; i++) {
             if(allmsgs[i].title != ele.title)
                 allmsgs[i].style.visibility='hidden';
+            else
+                allmsgs[i].style.visibility='visible';
+        }
+        var allclasses = document.getElementsByClassName('class');
+        for(var j = 0; j < allclasses.length; j++) {
+            allclasses[j].style.backgroundColor = 'rgb(240, 240, 240)';
         }
         ele.style.backgroundColor = 'red';
     }
