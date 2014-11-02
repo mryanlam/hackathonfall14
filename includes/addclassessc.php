@@ -1,5 +1,4 @@
 <?php
-if(isset($_POST['submittedlog'])) {
     DEFINE('USER', 'root');
     DEFINE('PASSWORD', '');
     DEFINE('HOST', 'localhost');
@@ -20,5 +19,4 @@ if(isset($_POST['submittedlog'])) {
         print("<p>No Classes Exist</p>");
     }
     $dbc->close();
-}
 ?>
