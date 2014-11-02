@@ -111,7 +111,7 @@ div.class {
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 5px;
-    margin-bottom: 5px;
+
 }
 
 div.topmsg{
@@ -121,7 +121,7 @@ div.topmsg{
     padding-top: 5px;
     padding-bottom: 5px;
     margin-top: 5px;
-    margin-bot: 5px;
+
     margin-left: 20px;
     margin-right: 20px;
     border: solid;
@@ -170,7 +170,7 @@ div.leftform{
     margin-top: 0px;
     margin-left: 20px;
     height: 50px;
-    width: 75%;
+    width: 80%;
 }
 
 div.sendform{
