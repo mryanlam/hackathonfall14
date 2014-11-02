@@ -9,13 +9,13 @@ while($curclass = $classes->fetch_assoc()) {
 $query = $query.")";
 $result = $dbc->query($query);
 while($curmsg = $result->fetch_assoc()) {
-    $query1 = "SELECT courseName, courseNumber FROM course WHERE id=".$curmsg['crsId'];
+    $query1 = "SELECT courseName FROM course WHERE id=".$curmsg['crsId'];
     $query2 = "SELECT first, last FROM account WHERE id=".$curmsg['authId'];
     $result1 = $dbc->query($query1);
     $result2 = $dbc->query($query2);
     $crs = $result1->fetch_assoc();
     $name = $result2->fetch_assoc();
-    print('<div class="topmsg" title='.$crs['courseNumber'].'>'.$name['first'].' '.$name['last'].' -> '.$crs['courseName'].'<br>');
+    print('<div class="topmsg" title='.$curmsg['crsId'].'>'.$name['first'].' '.$name['last'].' -> '.$crs['courseName'].'<br>');
     if($curmsg['type'] == 1) {
         $query1 = "SELECT message FROM textpost WHERE postId=".$curmsg['id'];
         $result1 = $dbc->query($query1);
