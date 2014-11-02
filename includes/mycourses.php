@@ -13,9 +13,9 @@ Make it clickable in css!
 <?php
 include "/hackathonfall14/includes/getclasses.php";
 ?>
-<div class="addclass">
+<button class="addclass">
 + Class
-</div>
+</button>
 </classlist>
 <chatbox>
 

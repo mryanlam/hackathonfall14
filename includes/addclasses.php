@@ -21,7 +21,9 @@ include "/hackathonfall14/includes/header.php";
 <!--Basically, forums just need to use post and you have to let Jeff know the name of the inputs -->
 <!--This is a shitty mockup from Jeff, change it however you want -->
 <div>
-
+<p>
+Click on a course to add it
+</p>
 <?php
 include "/hackathonfall14/includes/addclassessc.php";
 ?>
