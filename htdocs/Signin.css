@@ -105,8 +105,8 @@ classlist {
     margin-left: 0px;
     margin-right: 100px;
     width: 400px;
-    background-color: red;
-    height: auto;
+    background-color: rgb(240, 240, 240);
+    height: 100%;
 }
 
 chatbox {
@@ -115,5 +115,5 @@ chatbox {
     margin-left: 500px;
     background-color: yellow;
     width: 100%;
-    height: auto;
+    height: 100%;
 }
