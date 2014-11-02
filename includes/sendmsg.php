@@ -6,6 +6,7 @@ if(isset($_POST['sendval'])) {
     $gres = $dbc->query($gquery);
     $grow = $gres->fetch_assoc();
     $tquery = "INSERT INTO textpost (postId, message) VALUES (".$grow['max'].", ".$_POST['msgtosend'].")";
+    print($tquery."<br>");
     $tres = $dbc->query($tquery);
 }
 ?>
