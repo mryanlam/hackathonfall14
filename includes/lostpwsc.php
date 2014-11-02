@@ -13,8 +13,10 @@ if(isset($_POST['submittedlog'])) {
     if($result) {
         $row = $result->fetch_assoc();
         $query = "UPDATE account SET shaPassHash='".hash("sha512", $row["username"].$_POST['password'])."' WHERE email='".$_POST['email']."'";
-        print($query);
         $result = $dbc->query($query);
+        if($result) {
+            print("password changed");
+        }
     } else {
         print("<p>OOPS ".$dbc->error."</p>");
     }
