@@ -26,7 +26,7 @@ function classClick(ele) {
             allclasses[j].style.backgroundColor = 'rgb(254, 254, 254)';
         }
         ele.style.backgroundColor = 'rgb(220, 220, 220)';
-        alert(document.getElementByClassName('sendform').style.display);
+        alert("document.getElementByClassName('sendform').style.display");
         document.getElementByClassName('sendform').style.display='block';
         document.getElementByName('sendval').setAttribute('value', ele.title);
     }
