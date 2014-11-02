@@ -8,17 +8,23 @@ function addClass() {
 
 function classClick(ele) {
     var allmsgs = document.getElementsByClassName('topmsg');
-    if(ele.style.backgroundcolor == 'red') {
-        ele.style.backgroundcolor = '';
+    if(ele.style.backgroundColor == 'red') {
+        ele.style.backgroundColor = 'rgb(240, 240, 240)';
         for(var i = 0; i < allmsgs.length; i++) {
-            allmsgs[i].style.visibility='visible';
+            allmsgs[i].style.display='block';
         }
     } else {
         for(var i = 0; i < allmsgs.length; i++) {
             if(allmsgs[i].title != ele.title)
-                allmsgs[i].style.visibility='hidden';
+                allmsgs[i].style.display='none';
+            else
+                allmsgs[i].style.display='block';
         }
-        ele.style.backgroundcolor = 'red';
+        var allclasses = document.getElementsByClassName('class');
+        for(var j = 0; j < allclasses.length; j++) {
+            allclasses[j].style.backgroundColor = 'rgb(240, 240, 240)';
+        }
+        ele.style.backgroundColor = 'red';
     }
 }
 </script>
