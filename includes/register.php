@@ -7,7 +7,7 @@
 
 <body>
 <header>
-hello
+<img src="LOGO.png" height="80" width="150">
 </header>
 
 <missionstatement>
