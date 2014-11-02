@@ -4,10 +4,9 @@ $query = "SELECT * FROM post WHERE previousId=0 AND (";
 $curclass = $classes->fetch_assoc();
 $query = $query."crsId='".$curclass['crs1']."'";
 while($curclass = $classes->fetch_assoc()) {
-    $query = $query." OR crsId='".$curclass[crs1]."'";
+    $query = $query." OR crsId='".$curclass['crs1']."'";
 }
 $query = $query.")";
-print($query."<br>");
 $result = $dbc->query($query);
 while($curmsg = $result->fetch_assoc()) {
     $query1 = "SELECT courseName FROM course WHERE id=".$curmsg['crsId'];
@@ -15,7 +14,7 @@ while($curmsg = $result->fetch_assoc()) {
     $result1 = $dbc->query($query1);
     $result2 = $dbc->query($query2);
     $crs = $result1->fetch_assoc();
-    $name = $result1->fetch_assoc();
+    $name = $result2->fetch_assoc();
     print('<div class="topmsg">'.$name['first'].' '.$name['last'].' -> '.$crs['courseName'].'<br>');
     if($curmsg['type'] == 1) {
         $query1 = "SELECT message FROM textpost WHERE postId=".$curmsg['id'];
