@@ -16,7 +16,7 @@ if(isset($_POST['submittedlog'])) {
             $_SESSION['loggedin'] = true;
             $_SESSION['first'] = $row['first'];
             $_SESSION['last'] = $row['last'];
-            $_SESSION['email'] = $row['email']
+            $_SESSION['email'] = $row['email'];
             $_SESSION['user'] = $row['id'];
             header("Refresh:0");
         }
