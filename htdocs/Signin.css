@@ -161,7 +161,6 @@ div.leftform{
     margin-left: 0px;
     height: 50px;
     width: 85%;
-    background-color: red;
 }
 
 div.sendform{
@@ -175,7 +174,6 @@ div.rightform{
     height: 50px;
     width:15%;
     float: right;
-    background-color: yellow;
 }
 myErr {
     padding-left: 10px;
