@@ -10,11 +10,13 @@ function logout() {
     document.location.href="logout.php";
 }
 </script>
+<padder>
 <header>
 <img src="Logo.png" height="80" width="auto">
 <div class="logo">
-    SPEAKEASY
+    Speak Easy
 </div>
+</padder>
 <?php
 
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {

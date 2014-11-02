@@ -14,7 +14,7 @@ include "/hackathonfall14/includes/header.php";
 <signup>
 <!--Basically, forums just need to use post and you have to let Jeff know the name of the inputs -->
 <!--This is a shitty mockup from Jeff, change it however you want -->
-<div>
+<div class="sign">
 <form action="lostpwpage.php" method="post">
     <p>Lost Password!</p>
     <p><input type="text" name="email" placeholder="Email you signed up with"/></p>
