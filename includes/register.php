@@ -33,6 +33,7 @@
     <p><input type="submit" name="submitlog" value="Login" /></p>
     <input type="hidden" name="submittedlog" value="TRUE" />
 </form>
+<a href="lostpwpage.php">Forgot your password?</a>
 <?php
 include "/hackathonfall14/includes/loginsc.php";
 ?>
