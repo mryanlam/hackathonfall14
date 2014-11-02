@@ -17,3 +17,8 @@ include "/hackathonfall14/includes/getclasses.php";
 + Class
 </div>
 </classlist>
+<chatbox>
+
+</chatbox>
+</body>
+</html>
