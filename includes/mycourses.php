@@ -7,7 +7,7 @@ function addClass() {
 }
 
 function classClick(ele) {
-    alert(ele.nodeName);
+    alert(ele.title);
     var allmsgs = document.getElementsByClassName('topmsg');
     if(ele.style.backgroundcolor == 'red') {
         ele.style.backgroundcolor = '';
@@ -16,7 +16,7 @@ function classClick(ele) {
         }
     } else {
         for(var i = 0; i < allmsgs.length; i++) {
-            if(allmsgs[i].nodeName != ele.nodeName)
+            if(allmsgs[i].title != ele.title)
                 allmsgs[i].style.visibility='hidden';
         }
         ele.style.backgroundcolor = 'red';

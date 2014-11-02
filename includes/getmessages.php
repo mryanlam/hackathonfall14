@@ -15,7 +15,7 @@ while($curmsg = $result->fetch_assoc()) {
     $result2 = $dbc->query($query2);
     $crs = $result1->fetch_assoc();
     $name = $result2->fetch_assoc();
-    print('<div class="topmsg" name='.$crs['courseNumber'].'>'.$name['first'].' '.$name['last'].' -> '.$crs['courseName'].'<br>');
+    print('<div class="topmsg" title='.$crs['courseNumber'].'>'.$name['first'].' '.$name['last'].' -> '.$crs['courseName'].'<br>');
     if($curmsg['type'] == 1) {
         $query1 = "SELECT message FROM textpost WHERE postId=".$curmsg['id'];
         $result1 = $dbc->query($query1);
