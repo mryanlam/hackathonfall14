@@ -1,6 +1,7 @@
 <?php
 include "/hackathonfall14/includes/header.php";
 ?>
+<centered>
 <missionstatement>
     <ms class="header">
         Speak Easy
@@ -42,5 +43,6 @@ include "/hackathonfall14/includes/registersc.php";
 ?>
 </div>
 </signup>
+</centered>
 </body>
 </html>
