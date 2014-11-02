@@ -12,6 +12,8 @@ if(isset($_POST['submittedlog'])) {
     $result = $dbc->query($query);
     if($result->num_rows > 0) {
         $row = $result->fetch_assoc();
+        //print($row['shaPassHash'].'<br>');
+        //print(hash("sha512", $_POST['userlog'].$_POST['passlog']));
         if(strcmp($row['shaPassHash'], hash("sha512", $_POST['userlog'].$_POST['passlog'])) == 0) {
             $_SESSION['loggedin'] = true;
             $_SESSION['first'] = $row['first'];
@@ -20,8 +22,12 @@ if(isset($_POST['submittedlog'])) {
             $_SESSION['user'] = $row['id'];
             header("Refresh:0");
         }
+        else
+        {
+            print("<p>Incorrect Username or Password</p>");
+        }
     } else {
-        print("<p>username does not exist!</p>");
+        print("<p>Incorrect Username or Password</p>");
     }
     $dbc->close(); 
 }
