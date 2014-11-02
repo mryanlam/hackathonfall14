@@ -7,7 +7,7 @@ while($curclass = $classes->fetch_assoc()) {
         print('<button class="class" id='.$row['courseNumber'].'>');
         print($row['code'].' '.$row['courseNumber'].'<br>');
         print($row['courseName']);
-        print('</button>');
+        print('</button><br>');
     }
 }
 ?>
