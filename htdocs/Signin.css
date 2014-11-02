@@ -100,9 +100,8 @@ div.logo{
 }
 /*stretch to the end*/
 div.class {
-    top: 5px;
-    /*padding-top: 5px;
-    padding-bottom: 5px;*/
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left: 5px; 
     border: solid;
     cursor: pointer;
