@@ -8,8 +8,8 @@ function addClass() {
 
 function classClick(ele) {
     var allmsgs = document.getElementsByClassName('topmsg');
-    if(ele.style.color == 'red') {
-        ele.style.color = 'rgb(240, 240, 240)';
+    if(ele.style.background-color == 'red') {
+        ele.style.background-color = 'rgb(240, 240, 240)';
         for(var i = 0; i < allmsgs.length; i++) {
             allmsgs[i].style.visibility='visible';
         }
@@ -18,7 +18,7 @@ function classClick(ele) {
             if(allmsgs[i].title != ele.title)
                 allmsgs[i].style.visibility='hidden';
         }
-        ele.style.color = 'red';
+        ele.style.background-color = 'red';
     }
 }
 </script>
