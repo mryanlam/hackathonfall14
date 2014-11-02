@@ -5,6 +5,22 @@ include "/hackathonfall14/includes/header.php";
 function addClass() {
     document.location.href="classes.php";
 }
+
+function classClick(ele) {
+    var allmsgs = document.getElementsByClassName('topmsg');
+    if(ele.style.backgroundcolor == 'red') {
+        ele.style.backgroundcolor = '';
+        for(var i = 0; i < allmsgs.length; i++) {
+            allmsgs[i].style.visibility='visible';
+        }
+    } else {
+        for(var i = 0; i < allmsgs.length; i++) {
+            if(allmsgs[i].name != ele.name)
+                allmsgs[i].style.visibility='hidden';
+        }
+        ele.style.backgroundcolor = 'red';
+    }
+}
 </script>
 <classlist>
 <!--
