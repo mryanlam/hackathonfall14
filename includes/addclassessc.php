@@ -11,9 +11,9 @@ if($dbc->connect_error) {
 
 if (isset($_POST["choice"]))
 {
-    $query = 'SELECT * FROM mycourses WHERE id="'.$_SESSION["user"].'" AND crs1="'.$_POST["choice"].'")';
+    $query = 'SELECT * FROM mycourses WHERE id='.$_SESSION["user"].' AND crs1='.$_POST["choice"];
     print($query);
-    /*
+    
     $result = $dbc->query($query);
     if ($result)
     {
@@ -32,7 +32,7 @@ if (isset($_POST["choice"]))
             print("failed to register course");
         }
     }
-    */
+    
     
 }
 else 
