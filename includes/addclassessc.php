@@ -13,7 +13,7 @@
     if($result) {
         while ($row = $result->fetch_assoc())
         {
-            printf("%s, %d, %s\n", $row["department.code"], $row["course.courseNumber"], $row["course.courseName"]);
+            printf("%s, %d, %s\n", $row["code"], $row["courseNumber"], $row["courseName"]);
         }
     } else {
         print("<p>No Classes Exist</p>");
