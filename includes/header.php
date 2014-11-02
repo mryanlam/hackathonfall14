@@ -11,7 +11,10 @@ function logout() {
 }
 </script>
 <header>
-<img src="LOGO.png" height="80" width="auto">
+<img src="Logo.png" height="80" width="auto">
+<div class="logo">
+    SPEAKEASY
+</div>
 <?php
 
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
