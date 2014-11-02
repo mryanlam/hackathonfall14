@@ -11,16 +11,26 @@ if($dbc->connect_error) {
 
 if (isset($_POST["choice"]))
 {
-    $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
-    $result = $dbc ->query($query);
+    $query = 'SELECT * FROM mycourses WHERE id="'.$_SESSION["user"].'" AND crs1='.$_POST["choice"].'")';
+    $result = $dbc->query($query);
     if ($result)
     {
-        header("Location: index.php");
+        print("You are already registered for that course");
     }
     else
     {
-        print("failed to register course");
+        $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
+        $result = $dbc->query($query);
+        if ($result)
+        {
+            header("Location: index.php");
+        }
+        else
+        {
+            print("failed to register course");
+        }
     }
+    
 }
 else 
 {
