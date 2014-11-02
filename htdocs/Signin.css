@@ -145,22 +145,23 @@ classlist {
     background-color: rgb(240, 240, 240);
     height: 100%;
 }
-
 chatbox {
     position: absolute;
     margin-top: 100px;
     margin-left: 500px;
-    background-color: rgb(240, 240, 240);
-    width: 100%;
+    background-color: rgb(200, 200, 200);
+    width: 70%;
     height: 100%;
 }
+
 
 div.leftform{
     display: inline-block;
     margin-top: 0px;
     margin-left: 0px;
     height: 50px;
-    width: 80%;
+    width: 1100px;
+    background-color: red;
 }
 
 div.sendform{
@@ -172,9 +173,9 @@ div.rightform{
     margin-top: 0px;
     margin-left: 0px;
     height: 50px;
-    width:10%;
+    width:100px;
+    background-color: yellow;
 }
-
 myErr {
     padding-left: 10px;
     padding-top; 10px;
