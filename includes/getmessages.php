@@ -6,7 +6,7 @@ $query = $query."crsId='".$curclass['crs1']."'";
 while($curclass = $classes->fetch_assoc()) {
     $query = $query." OR crsId='".$curclass['crs1']."'";
 }
-$query = $query.")";
+$query = $query.") ORDER BY id DESC";
 $result = $dbc->query($query);
 while($curmsg = $result->fetch_assoc()) {
     $query1 = "SELECT courseName FROM course WHERE id=".$curmsg['crsId'];
