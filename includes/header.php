@@ -12,7 +12,9 @@ function logout() {
 </script>
 <padder>
 <header>
+<a href="index.php">
 <img src="Logo.png" height="80" width="auto">
+</a>
 <div class="logo">
     Speak Easy
 </div>

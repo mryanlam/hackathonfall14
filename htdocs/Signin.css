@@ -17,11 +17,6 @@ padder {
     padding-left: 20px;
 }
 
-centered {
-    Position: fixed;
-    margin-left: 25%;
-}
-
 missionstatement {
     text-shadow: 0 0 3px rgb(0, 0, 0);
     Position: relative;
