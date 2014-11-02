@@ -34,7 +34,7 @@ if (isset($_POST["choice"]))
     if ($result)
     {
         $row=$result->fetch_assoc();
-        printf($row['user']." ".$row['choice']);
+        printf($row['id']." ".$row['crs1']);
         //print("<myErr>You are already registered for that course<br></myErr>");
         makeButtons($dbc);
     }
