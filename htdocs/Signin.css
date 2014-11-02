@@ -39,6 +39,15 @@ signup {
     margin-top: 200px;
 }
 
+classadd {
+    Position: absolute;
+    text-align: center;
+    margin-top: 200px;
+    left: 20px;
+    width: auto;
+    height: auto;
+}
+
 body {
     background-image:url(pic1.jpg);
     background-repeat:no-repeat;

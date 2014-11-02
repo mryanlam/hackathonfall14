@@ -1,6 +1,16 @@
 <?php
 include "/hackathonfall14/includes/header.php";
 ?>
+<missionstatement>
+    <ms class="header">
+        Speak Easy
+    </ms>
+    <ms class="content">
+    <br>Making teamwork smarter and faster.
+    <br>Connect with classmates and peers and begin to work together!
+    <br>Solve the problems of today and reach the goals of tomorrow.
+    </ms>
+</missionstatement>
 <signup>
 <div>
 <form action="index.php" method="post">
