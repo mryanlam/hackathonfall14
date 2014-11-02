@@ -42,7 +42,7 @@ if (isset($_POST["choice"]))
     {
         $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
         $result = $dbc->query($query);
-        if ($result->num_rows > 0)
+        if ($result)
         {
             header("Location: index.php");
         }
