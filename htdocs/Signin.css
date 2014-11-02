@@ -105,7 +105,8 @@ div.class {
     border: solid;
     cursor: pointer;
     border-width: 1px;
-    background-color: rgb(240,240,240);
+    border-radius: 5px;
+    background-color: rgb(254,254,254);
 }
 
 button.addclass {
@@ -123,7 +124,8 @@ div.topmsg{
     width: 100%;
     border: solid;
     border-width: 1px;
-    background-color: rgb(227, 236, 255);
+    border-radius: 5px;
+    background-color: rgb(254, 254, 254);
 }
 
 
@@ -133,6 +135,7 @@ p {
 }
 
  /* this stuff is for the main page */
+
 classlist {
     position: absolute;
     margin-top: 100px;
@@ -146,7 +149,7 @@ classlist {
 chatbox {
     position: absolute;
     margin-top: 100px;
-    margin-left: 450px;
+    margin-left: 500px;
     background-color: rgb(240, 240, 240);
     width: 100%;
     height: 100%;
