@@ -4,7 +4,7 @@ while($curclass = $classes->fetch_assoc()) {
     $result = $dbc->query($query);
     if($result && $result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        print('<div class="class" onClick="classClick(this)" title='.$row['courseNumber'].'">');
+        print('<div class="class" onClick="classClick(this)" title='.$row['courseNumber'].'>');
         print($row['code'].' '.$row['courseNumber'].'<br>');
         print($row['courseName']);
         print('</div><br>');
