@@ -1,8 +1,9 @@
 <?php
+$classes->data_seek(0);
 $query = "SELECT * FROM post WHERE previousId=0 AND (";
-$curclass = $classes2->fetch_assoc();
+$curclass = $classes->fetch_assoc();
 $query = $query."crsId='".$curclass['crs1']."'";
-while($curclass = $classes2->fetch_assoc()) {
+while($curclass = $classes->fetch_assoc()) {
     $query = $query." OR crsId='".$curclass[crs1]."'";
 }
 $query = $query.")";
