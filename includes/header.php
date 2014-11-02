@@ -32,8 +32,9 @@ if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
 <!--
 body{
 background: url(<?php echo $selectedBg; ?>) no-repeat;
+background-size:cover;
 }
 -->
-</style>style>
+</style>
 </header>
 
