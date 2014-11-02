@@ -13,7 +13,7 @@ function classClick(ele) {
         for(var i = 0; i < allmsgs.length; i++) {
             allmsgs[i].style.display='block';
         }
-        document.getElementByClassName('sendform').style.display='none';
+        document.getElementsByClassName('sendform')[0].style.display='none';
     } else {
         for(var i = 0; i < allmsgs.length; i++) {
             if(allmsgs[i].title != ele.title)
@@ -26,10 +26,8 @@ function classClick(ele) {
             allclasses[j].style.backgroundColor = 'rgb(254, 254, 254)';
         }
         ele.style.backgroundColor = 'rgb(220, 220, 220)';
-        alert("document.getElementByClassName('sendform').style.display");
-        document.getElementByClassName('sendform').style.display='block';
-        document.getElementByName('sendval').setAttribute('value', ele.title);
-        alert(document.getElementByName('sendval').getAttribute('value'));
+        document.getElementsByClassName('sendform')[0].style.display='block';
+        document.getElementsByName('sendval')[0].setAttribute('value', ele.title);
     }
 }
 </script>
