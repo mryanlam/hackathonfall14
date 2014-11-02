@@ -11,14 +11,14 @@ function classClick(ele) {
     if(ele.style.backgroundColor == 'red') {
         ele.style.backgroundColor = 'rgb(240, 240, 240)';
         for(var i = 0; i < allmsgs.length; i++) {
-            allmsgs[i].style.display='initial';
+            allmsgs[i].style.display='inline';
         }
     } else {
         for(var i = 0; i < allmsgs.length; i++) {
             if(allmsgs[i].title != ele.title)
                 allmsgs[i].style.display='none';
             else
-                allmsgs[i].style.display='initial';
+                allmsgs[i].style.display='inline';
         }
         var allclasses = document.getElementsByClassName('class');
         for(var j = 0; j < allclasses.length; j++) {
