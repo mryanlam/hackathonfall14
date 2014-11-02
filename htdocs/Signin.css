@@ -14,7 +14,7 @@ header {
 }
 missionstatement {
     text-shadow: 0 0 3px rgb(0, 0, 0);
-    Position: absolute;
+    Position: relative;
     margin: 100px 100px;
     margin-top: 200px;
     width: auto;
@@ -30,7 +30,7 @@ ms.content {
     font-size: 100%;
 }
 signup {
-    Position: absolute;
+    Position: relative;
     left: 20px;
     width: auto;
     height: auto;
