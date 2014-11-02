@@ -7,6 +7,7 @@ function addClass() {
 }
 
 function classClick(ele) {
+    alert(ele.name);
     var allmsgs = document.getElementsByClassName('topmsg');
     if(ele.style.backgroundcolor == 'red') {
         ele.style.backgroundcolor = '';
