@@ -8,11 +8,12 @@ function addClass() {
 
 function classClick(ele) {
     var allmsgs = document.getElementsByClassName('topmsg');
-    if(ele.style.backgroundColor == 'red') {
-        ele.style.backgroundColor = 'rgb(240, 240, 240)';
+    if(ele.style.backgroundColor == 'rgb(220, 220, 220)') {
+        ele.style.backgroundColor = 'rgb(254, 254, 254)';
         for(var i = 0; i < allmsgs.length; i++) {
             allmsgs[i].style.display='block';
         }
+        document.getElementByClassName("sendform").style.display='none';
     } else {
         for(var i = 0; i < allmsgs.length; i++) {
             if(allmsgs[i].title != ele.title)
@@ -22,20 +23,22 @@ function classClick(ele) {
         }
         var allclasses = document.getElementsByClassName('class');
         for(var j = 0; j < allclasses.length; j++) {
-            allclasses[j].style.backgroundColor = 'rgb(240, 240, 240)';
+            allclasses[j].style.backgroundColor = 'rgb(254, 254, 254)';
         }
-        ele.style.backgroundColor = 'red';
+        ele.style.backgroundColor = 'rgb(220, 220, 220)';
+        document.getElementByClassName("sendform").style.display='block';
+        document.getElementByName("sendval").setAttribute("value", ele.title);
     }
 }
 </script>
 <classlist>
-<!--
-<div class="class" id=CLASS#>
-DEPT CLASS#<br>
-Classname
-</div>
-Make it clickable in css!
--->
+<div class="sendform">
+<form action="index.php" method="post">
+<div class="leftform"><input type="text" name="msgtosend" placeholder="Enter message here!"/></div>
+<div class="rightform"><input type="submit" name="sendbtn" value="Send!"/></div>
+<input type="hidden" name="sendval"/>
+</form>
+</div> 
 <?php
 include "/hackathonfall14/includes/getclasses.php";
 ?>
