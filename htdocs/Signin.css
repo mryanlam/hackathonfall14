@@ -66,6 +66,10 @@ body {
     font-family: "Arial", sans-serif;
 }
 
+div.css-slideshow{
+
+}
+
 div.sign {
     border-width:1px;
     box-shadow: 0 0 3px rgb(0, 0, 0);
@@ -99,11 +103,12 @@ div.logo{
     font-size: 300%;
 }
 /*stretch to the end*/
-button.class {
+div.class {
     text-align: left;
     padding-left: 10px; 
     padding-right: 10px;
     width: 400px;
+    cursor: pointer;
 }
 
 button.addclass {
