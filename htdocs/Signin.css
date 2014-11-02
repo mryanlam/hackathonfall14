@@ -26,6 +26,7 @@ missionstatement {
     height: auto;
     color: white;
 }
+
 ms.header {
     font-size: 200%;
 }
@@ -34,6 +35,7 @@ ms.content {
     text-align: left;
     font-size: 100%;
 }
+
 signup {
     Position: relative;
     left: 20px;
@@ -101,29 +103,30 @@ div.class {
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 5px; 
-    width: 395;
     border: solid;
     cursor: pointer;
     border-width: 1px;
-    background-color: rgb(240,240,240);
-}
+    border-radius: 5px;
+    background-color: rgb(254,254,254);
+    margin-left: 20px;
+    margin-right: 20px;
+    /*margin-bottom: 5px;*/
 
-button.addclass {
-    text-align: left;
-    padding-left: 10px; 
-    padding-right: 10px;
-    width: 400px
 }
 
 div.topmsg{
+    float: center;
     padding-left: 5px;
-    padding-top: 5px;
     padding-right: 5px;
+    padding-top: 5px;
     padding-bottom: 5px;
-    width: 100%;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
     border: solid;
     border-width: 1px;
-    background-color: rgb(227, 236, 255);
+    border-radius: 5px;
+    background-color: rgb(254, 254, 254);
 }
 
 
@@ -133,25 +136,55 @@ p {
 }
 
  /* this stuff is for the main page */
+
 classlist {
+border-width:1px;
+    box-shadow: 0 0 3px rgb(0, 0, 0);
+    border-radius: 10px;
     position: absolute;
     margin-top: 100px;
     margin-left: 0px;
     margin-right: 100px;
     width: 401px;
     background-color: rgb(240, 240, 240);
-    height: 100%;
+    height: auto;
 }
 
 chatbox {
+border-width:1px;
+    box-shadow: 0 0 3px rgb(0, 0, 0);
+    border-radius: 10px;
     position: absolute;
     margin-top: 100px;
-    margin-left: 450px;
+    margin-left: 500px;
+    margin-right: 500px;
+    float: right;
     background-color: rgb(240, 240, 240);
-    width: 100%;
-    height: 100%;
+    width: 40%;
+    height: 50%;
 }
 
+div.leftform{
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 20px;
+    height: 50px;
+    width: 79%;
+}
+
+div.sendform{
+    display: none;
+}
+
+div.rightform{
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 20px;
+    height: 50px;
+    width:15%;
+    float: right;
+}
 myErr {
     padding-left: 10px;
     padding-top; 10px;
