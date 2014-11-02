@@ -29,6 +29,7 @@ function classClick(ele) {
         alert("document.getElementByClassName('sendform').style.display");
         document.getElementByClassName('sendform').style.display='block';
         document.getElementByName('sendval').setAttribute('value', ele.title);
+        alert(document.getElementByName('sendval').getAttribute('value'));
     }
 }
 </script>
