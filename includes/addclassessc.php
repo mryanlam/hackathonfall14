@@ -30,7 +30,7 @@ else
     if($result) {
         while ($row = $result->fetch_assoc())
         {
-            printf('<button onclick="checkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
+            printf('<button class="addclass" onclick="checkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
         }
     } else {
         print("<p>No Classes Exist</p>");
