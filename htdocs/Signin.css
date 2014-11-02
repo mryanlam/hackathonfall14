@@ -1,10 +1,10 @@
 header, signup, missionstatement {
-    display: block;	
+    display: inline-block;	
 }
 
 header {
     Position: fixed;
-    background-color: rgb(168, 172, 255);
+    background-color: rgb(0, 131, 214);
 	margin: 0px;
     left: 0px;
     top: 0px;
@@ -14,11 +14,11 @@ header {
 }
 missionstatement {
     text-shadow: 0 0 3px rgb(0, 0, 0);
-    Position: absolute;
+    Position: relative;
     margin: 100px 100px;
-    margin-top: 200px;
-    width: 600px;
-    height: 400px;
+    margin-top: 150px;
+    width: auto;
+    height: auto;
     color: white;
 }
 ms.header {
@@ -30,12 +30,13 @@ ms.content {
     font-size: 100%;
 }
 signup {
-    Position: absolute;
-    margin-left: 900px;
-    margin-top: 200px;
-    margin-right: 200px;
+    Position: relative;
+    left: 20px;
     width: auto;
     height: auto;
+    float: right;
+    margin-right: 100px;
+    margin-top: 150px;
 }
 
 body {
