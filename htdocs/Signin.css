@@ -135,6 +135,15 @@ p {
     padding-top; 10px;
 }
 
+button.addclass {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 400px;
+}
+
  /* this stuff is for the main page */
 
 classlist {
