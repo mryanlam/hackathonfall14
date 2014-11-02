@@ -14,6 +14,7 @@ if(isset($_POST['submitted'])) {
         $_SESSION['loggedin'] = true;
         $_SESSION['first'] = $_POST['first'];
         $_SESSION['last'] = $_POST['last'];
+        $_SESSION['email'] = $_POST['email'];
         $query = "SELECT id FROM account WHERE username='".$_POST['user']."'";
         $result = $dbc->query($query);
         $row = $result->fetch_assoc();
