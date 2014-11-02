@@ -46,6 +46,7 @@ classadd {
     margin-left:-250px; 
     width: auto;
     height: auto;
+    background-color: rgb(240,240,240);
 }
 
 body {
@@ -54,6 +55,7 @@ body {
     background-size:cover;
     font-family: "Arial", sans-serif;
 }
+
 div.sign {
     border-width:1px;
     box-shadow: 0 0 3px rgb(0, 0, 0);
@@ -88,9 +90,25 @@ div.logo{
 }
 /*stretch to the end*/
 button.class {
+    text-align: left;
     padding-left: 10px; 
     padding-right: 10px;
     width: 400px;
+}
+
+button.addclass {
+    text-align: left;
+    padding-left: 10px; 
+    padding-right: 10px;
+    width: 400px
+}
+
+div.topmsg{
+    width: 100%;
+    border: solid;
+    border-radius: 25px;  
+    border-width: 1px;
+    background-color: rgb(227, 236, 255);
 }
 
 p {
@@ -113,7 +131,13 @@ chatbox {
     position: absolute;
     margin-top: 100px;
     margin-left: 500px;
-    background-color: yellow;
+    background-color: rgb(240, 240, 240);
     width: 100%;
     height: 100%;
+}
+
+myErr {
+    padding-left: 10px;
+    padding-top; 10px;
+    color: red;
 }

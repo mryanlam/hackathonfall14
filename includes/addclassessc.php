@@ -1,5 +1,22 @@
 <?php
+/* Functions */
+function makeButtons($dbc)
+{
+    $query = "SELECT department.code, course.id, course.courseNumber, course.courseName FROM course INNER JOIN department ON course.deptid=department.id";
+    //print($query);
+    $result = $dbc->query($query);
+    if($result) {
+        while ($row = $result->fetch_assoc())
+        {
+            printf('<button class="addclass" onclick="checkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
+        }
+    } else {
+        print("<myErr>No Classes Exist</myErr>");
+    }
+    $dbc->close();
+}
 
+/* Script */
 DEFINE('USER', 'root');
 DEFINE('PASSWORD', '');
 DEFINE('HOST', 'localhost');
@@ -11,30 +28,32 @@ if($dbc->connect_error) {
 
 if (isset($_POST["choice"]))
 {
-    $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
-    $result = $dbc ->query($query);
-    if ($result)
+    $query = "SELECT id, crs1 FROM mycourses WHERE id=".$_SESSION['user']." AND crs1=".$_POST['choice'];
+    //print($query);
+    $result = $dbc->query($query);
+    if ($result->num_rows > 0)
     {
-        header("Location: index.php");
+        $row=$result->fetch_assoc();
+        //printf($row['id']." ".$row['crs1']);
+        print("<myErr>You are already registered for that course<br></myErr>");
+        makeButtons($dbc);
     }
     else
     {
-        print("failed to register course");
+        $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
+        $result = $dbc->query($query);
+        if ($result)
+        {
+            header("Location: index.php");
+        }
+        else
+        {
+            print("<myErr>failed to register course</myErr>");
+        }
     }
 }
 else 
 {
-    $query = "SELECT department.code, course.id, course.courseNumber, course.courseName FROM course INNER JOIN department ON course.deptid=department.id";
-    //print($query);
-    $result = $dbc->query($query);
-    if($result) {
-        while ($row = $result->fetch_assoc())
-        {
-            printf('<button onclick="checkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
-        }
-    } else {
-        print("<p>No Classes Exist</p>");
-    }
-    $dbc->close();
+    makeButtons($dbc);
 }
 ?>
