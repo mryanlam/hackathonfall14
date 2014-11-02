@@ -21,10 +21,11 @@ missionstatement {
     text-shadow: 0 0 3px rgb(0, 0, 0);
     Position: relative;
     margin: 100px 100px;
-    margin-top: 150px;
+    margin-top: 250px;
     width: auto;
     height: auto;
     color: white;
+    font-size: 150%;
 }
 
 ms.header {
