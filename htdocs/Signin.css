@@ -155,6 +155,26 @@ chatbox {
     height: 100%;
 }
 
+div.leftform{
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 50px;
+    width: 80%;
+}
+
+div.sendform{
+    display: none;
+}
+
+div.rightform{
+    display: inline-block;
+    margin-top: 0px;
+    margin-left: 0px;
+    height: 50px;
+    width:10%;
+}
+
 myErr {
     padding-left: 10px;
     padding-top; 10px;
