@@ -7,7 +7,7 @@
 
 <body>
 <header>
-<img src="LOGO.png" height="80" width="150">
+<img src="LOGO.png" height="80" width="auto">
 <?php
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     print('<div class="headername">'.$_SESSION['first'].' '.$_SESSION['last'].'<br>'.$_SESSION['email'].'</div>');
