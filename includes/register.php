@@ -12,7 +12,7 @@ include "/hackathonfall14/includes/header.php";
     </ms>
 </missionstatement>
 <signup>
-<div>
+<div class="sign">
 <form action="index.php" method="post">
     <p>Log in!</p>
     <p><input type="text" name="userlog" placeholder="Username or Email"/></p>
@@ -26,7 +26,7 @@ include "/hackathonfall14/includes/loginsc.php";
 ?>
 </div>
 <br>
-<div>
+<div class="sign">
 <form action="index.php" method="post">
     <p>Sign up!</p>
     <p><input type="text" name="user" placeholder="Username"/></p>
