@@ -19,7 +19,7 @@ function logout() {
 
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
     print('<div class="headername">'.$_SESSION['first'].' '.$_SESSION['last'].'<br>'.$_SESSION['email']);
-    print('<button onClick=logout()>Logout</button>');
+    print('<br><button onClick=logout()>Logout</button></div>');
 }
 ?>
 </header>
