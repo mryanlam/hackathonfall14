@@ -12,7 +12,7 @@ if(isset($_POST['submitted'])) {
     $pos = strpos($_POST['email'], $emailCheck);
     if ($pos === false)
     {
-        print(<myErr>Must be a valid email address<br></myErr>);
+        print("<myErr>Must be a valid email address<br></myErr>");
     }
     else
     {
