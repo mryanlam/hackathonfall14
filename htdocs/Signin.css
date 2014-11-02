@@ -168,9 +168,9 @@ border-width:1px;
 div.leftform{
     display: inline-block;
     margin-top: 0px;
-    margin-left: 0px;
+    margin-left: 20px;
     height: 50px;
-    width: 85%;
+    width: 75%;
 }
 
 div.sendform{
@@ -181,6 +181,7 @@ div.rightform{
     display: inline-block;
     margin-top: 0px;
     margin-left: 0px;
+    margin-right: 20px;
     height: 50px;
     width:15%;
     float: right;
