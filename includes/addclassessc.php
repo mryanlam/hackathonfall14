@@ -31,7 +31,7 @@ if (isset($_POST["choice"]))
     $query = "SELECT id, crs1 FROM mycourses WHERE id=".$_SESSION['user']." AND crs1=".$_POST['choice'];
     //print($query);
     $result = $dbc->query($query);
-    if ($result)
+    if ($result->num_rows > 0)
     {
         $row=$result->fetch_assoc();
         printf($row['id']." ".$row['crs1']);
@@ -42,7 +42,7 @@ if (isset($_POST["choice"]))
     {
         $query = 'INSERT INTO mycourses (id, crs1) VALUES ("'.$_SESSION["user"].'", "'.$_POST["choice"].'")';
         $result = $dbc->query($query);
-        if ($result)
+        if ($result->num_rows > 0)
         {
             header("Location: index.php");
         }
