@@ -11,10 +11,10 @@ $query = "SELECT id FROM account WHERE username='".$_SESSION['user']."'";
 $result = $dbc->query($query);
 if($result->num_rows > 0){
     $row = $result->fetch_assoc();
-    $query = "SELECT crs1, crs2, crs3, crs4 FROM mycourses WHERE id='".$row['id']."'";
+    $query = "SELECT crs1 FROM mycourses WHERE id='".$row['id']."'";
     $result = $dbc->query($query);
     if($result->num_rows > 0){
-        $classes = $result->fetch_assoc();
+        $classes = $result;
         include "/hackathonfall14/includes/mycourses.php";
     } else {
         $dbc->close();
