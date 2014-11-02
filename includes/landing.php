@@ -15,7 +15,6 @@ if($result->num_rows > 0){
     $result = $dbc->query($query);
     if($result->num_rows > 0){
         $classes = $result;
-        $classes2 = $result;
         include "/hackathonfall14/includes/mycourses.php";
     } else {
         $dbc->close();
