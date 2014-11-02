@@ -68,3 +68,23 @@ p {
     padding-left: 10px;
     padding-top; 10px;
 }
+ /* this stuff is for the main page */
+classlist {
+    position: relative;
+    margin-top: 80px;
+    margin-left: 0px;
+    width: 200px;
+    background-color: red;
+    bottom: 0px;
+    height: 100vh;
+}
+
+chatbox {
+    position: relative;
+    margin-top: 80px;
+    width:600px;
+    background-color: yellow;
+    bottom: 0px;
+    width: 100vh;
+    height: 100vh;
+}

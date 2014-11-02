@@ -33,8 +33,7 @@ CREATE TABLE `course` (
 DROP TABLE IF EXISTS `myCourses`;
 CREATE TABLE `myCourses` (
     `id` int(10) unsigned NOT NULL,
-    `crs1` int(10) unsigned,
-    PRIMARY KEY (`id`)
+    `crs1` int(10) unsigned
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Courses an account is associated with';
 
 DROP TABLE IF EXISTS `post`;
