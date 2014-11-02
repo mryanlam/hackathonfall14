@@ -33,7 +33,7 @@ Make it clickable in css!
 <?php
 include "/hackathonfall14/includes/getclasses.php";
 ?>
-<button class="class" onClick=addClass()>
+<button class="class" onClick="addClass();">
 + Class
 </button>
 </classlist>
