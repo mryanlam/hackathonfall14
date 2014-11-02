@@ -11,7 +11,7 @@ function makeButtons($dbc)
             printf('<button class="addclass" onclick="checkBtn(%d)">%s, %d, %s</button><br>', $row["id"], $row["code"], $row["courseNumber"], $row["courseName"]);
         }
     } else {
-        print("<p>No Classes Exist</p>");
+        print("<myErr>No Classes Exist</myErr>");
     }
     $dbc->close();
 }
@@ -33,7 +33,7 @@ if (isset($_POST["choice"]))
     $result = $dbc->query($query);
     if ($result)
     {
-        print("You are already registered for that course");
+        print("<myErr>You are already registered for that course<br></myErr>");
         makeButtons($dbc);
     }
     else
@@ -46,10 +46,9 @@ if (isset($_POST["choice"]))
         }
         else
         {
-            print("failed to register course");
+            print("<myErr>failed to register course</myErr>");
         }
     }
-    $dbc->close();
 }
 else 
 {

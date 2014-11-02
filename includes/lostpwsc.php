@@ -17,10 +17,10 @@ if(isset($_POST['submittedlog'])) {
         if($result) {
             print("<p>password changed</p>");
         } else {
-            print("<p>failed to change password</p>");
+            print("<myErr>failed to change password</myErr>");
         }
     } else {
-        print("<p>incorrect email</p>");
+        print("<myErr>incorrect email</myErr>");
     }
     $dbc->close();
 }

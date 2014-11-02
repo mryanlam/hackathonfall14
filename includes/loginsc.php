@@ -24,10 +24,10 @@ if(isset($_POST['submittedlog'])) {
         }
         else
         {
-            print("<p>Incorrect Username or Password</p>");
+            print("<myErr>Incorrect Username or Password</myErr>");
         }
     } else {
-        print("<p>Incorrect Username or Password</p>");
+        print("<myErr>Incorrect Username or Password</myErr>");
     }
     $dbc->close(); 
 }
