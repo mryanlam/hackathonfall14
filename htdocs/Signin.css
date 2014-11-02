@@ -117,11 +117,12 @@ button.addclass {
 }
 
 div.topmsg{
+    float: center;
     padding-left: 5px;
-    padding-top: 5px;
     padding-right: 5px;
+    padding-top: 5px;
     padding-bottom: 5px;
-    width: 99%;
+    width: 95%;
     border: solid;
     border-width: 1px;
     border-radius: 5px;
@@ -143,7 +144,7 @@ classlist {
     margin-right: 100px;
     width: 401px;
     background-color: rgb(240, 240, 240);
-    height: 50%;
+    height: auto;
 }
 chatbox {
     position: absolute;
@@ -151,7 +152,7 @@ chatbox {
     margin-left: 500px;
     margin-right: 500px;
     float: right;
-    background-color: rgb(200, 200, 200);
+    background-color: rgb(240, 240, 240);
     width: 40%;
     height: 50%;
 }
